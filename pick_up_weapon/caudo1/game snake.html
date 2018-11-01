@@ -51,7 +51,7 @@ function getRandomInt(min, max) {
 function loop() {
   requestAnimationFrame(loop);
 
-  if (++count < 0) {
+  if (++count < -2) {
     return;
   }
 
@@ -61,7 +61,7 @@ function loop() {
   snake.x += snake.dx;
   snake.y += snake.dy;
 
-  if (snake.x < -2) {
+  if (snake.x < 0) {
     snake.x = canvas.width - grid;
   }
   else if (snake.x >= canvas.width) {
